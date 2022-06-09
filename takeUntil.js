@@ -7,18 +7,15 @@ const assertArraysEqual = function(actual, expected) {
 };
 
 const eqArrays = function(actual, expected) {
-  if (actual.length !== expected.length) {
-    console.log(`❌Assertion Failed❌: ${actual} !== ${expected}`);
-    return;
+  if (actual.length !== expected.length)
+  return false;
+for (let i = 0; i < actual.length; i++) {
+  if (actual[i] !== expected[i]) {
+    return false;
   }
-  for (let i = 0; i < actual.length; i++) {
-    if (actual[i] !== expected[i]) {
-      console.log(`❌Assertion Failed❌: ${actual} !== ${expected}`);
-      return;
-    }
-  }
-  console.log(`🟢Assertion Passed🟢: ${actual} === ${expected}`);
-};
+ }
+ return true;
+}
 
 const takeUntil = function(arr, callback) {
   let newArr = [];

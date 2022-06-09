@@ -1,17 +1,13 @@
-// FUNCTION IMPLEMENTATION
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
-    console.log(`Assertion Passed: ${actual} === ${expected}`);
-  } else if (actual !== expected) {
-    console.log(`Assertion Failed: ${actual} !== ${expected}`);
+    console.log(`🟢Assertion Passed🟢: ${actual} === ${expected}`);
+  } else {
+    console.log(`❌Assertion Failed❌: ${actual} !== ${expected}`);
   }
 };
-const head = function (actual) {
-  if (actual.length === 0) {
-    return undefined;
-  } else {
-    return actual[0];
-  }
+
+const head = function (arr) {
+  return arr[0];
 };
 
 assertEqual(head[1, 1]);

@@ -12,7 +12,7 @@ const findKey = function(obj, callback) {
       return key;
     }
   }
-};
+};  
 
 console.log(findKey({
   "Blue Hill": { stars: 1 },
