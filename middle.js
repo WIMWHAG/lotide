@@ -1,24 +1,29 @@
-const eqArrays = function(actual, expected) {
-  if (actual.length !== expected.length) {
-    console.log(`❌Assertion Failed❌: ${actual} !== ${expected}`);
-    return;
+const assertEqual = function(actual, expected) {
+  if (actual === expected) {
+    console.log(`🟢: ${actual} === ${expected}`);
+  } else {
+    console.log(`❌: ${actual} !== ${expected}`);
   }
-  for (let i = 0; i < actual.length; i++) {
-    if (actual[i] !== expected[i]) {
-      console.log(`❌Assertion Failed❌: ${actual} !== ${expected}`);
-      return;
-    }
-  }
-  console.log(`🟢Assertion Passed🟢: ${actual} === ${expected}`);
 };
 
-const assertArraysEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`🟢Assertion Passed🟢: ${actual} === ${expected}`);
+const assertArraysEqual = function (arr1, arr2) {
+  if (eqArrays(arr1, arr2)) {
+    console.log(`🟢: ${arr1} === ${arr2}`);
   } else {
-    console.log(`❌Assertion Failed❌: ${actual} !== ${expected}`);
+    console.log(`❌: ${arr1} !== ${arr2}`);
   }
 };
+
+const eqArrays = function(actual, expected) {
+  if (actual.length !== expected.length)
+  return false;
+for (let i = 0; i < actual.length; i++) {
+  if (actual[i] !== expected[i]) {
+    return false;
+  }
+ }
+ return true;
+}
 
 const middle = function(arr) {
   let newArr = [];
