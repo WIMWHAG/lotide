@@ -1,15 +1,9 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`🟢: ${actual} === ${expected}`);
-  } else {
-    console.log(`❌: ${actual} !== ${expected}`);
-  }
-};
+const assertEqual = require('./assertEqual');
 
 const head = function (arr) {
   return arr[0];
 };
 
 // Test Codes:
-// assertEqual(head[1, 1]);
-// assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
+// console.log(assertEqual(head[1, 1]));
+// console.log(assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello"));

@@ -11,3 +11,5 @@ const assertEqual = function(actual, expected) {
 // console.log(assertEqual(1, 1));
 // console.log(assertEqual("WIM", "of the", "WHAG"));
 // console.log(assertEqual(27, 27));
+
+module.exports = assertEqual;
