@@ -1,4 +1,4 @@
-const assertEqual = require('../assertEqual');
+const assertEqual = require('./assertEqual');
 
 const eqArrays = function(actual, expected) {
   if (actual.length !== expected.length)
@@ -28,4 +28,4 @@ const middle = function(arr) {
 // Test Codes:
 // console.log(assertArraysEqual(middle([1, 2, 3, 4, 5])));
 
-module.exports = assertEqual;
+module.exports = middle;

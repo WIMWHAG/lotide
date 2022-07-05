@@ -10,3 +10,5 @@ const tail = function(actual) {
 // console.log(test);
 // console.log(result);
 // assertEqual(test.length, 5);
+
+module.exports = tail;

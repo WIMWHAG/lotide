@@ -1,4 +1,4 @@
-const assertEqual = require('../assertEqual');
+const assertEqual = require('./assertEqual');
 
 const eqArrays = function(actual, expected) {
   if (actual.length !== expected.length)
@@ -24,4 +24,4 @@ for (let i = 0; i < actual.length; i++) {
 // console.log(eqArrays(["1", "2", "3"], ["1", "2", "3"])) // => true
 // console.log(eqArrays(["1", "2", "3"], ["1", "2", 3])) // => false
 
-module.exports = assertEqual;
+module.exports = eqArrays;
