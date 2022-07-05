@@ -1,10 +1,4 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`🟢: ${actual} === ${expected}`);
-  } else {
-    console.log(`❌: ${actual} !== ${expected}`);
-  }
-};
+const assertEqual = require('./assertEqual');
 
 const tail = function(actual) {
   return actual.slice(1);
@@ -16,5 +10,3 @@ const tail = function(actual) {
 // console.log(test);
 // console.log(result);
 // assertEqual(test.length, 5);
-
-
