@@ -1,10 +1,4 @@
-const assertArraysEqual = function (arr1, arr2) {
-  if (eqArrays(arr1, arr2)) {
-    console.log(`🟢: ${arr1} === ${arr2}`);
-  } else {
-    console.log(`❌: ${arr1} !== ${arr2}`);
-  }
-};
+const assertEqual = require('./assertEqual');
 
 findKeyByValue = function(object, value) {
   let keys = Object.keys(object);
@@ -24,3 +18,5 @@ findKeyByValue = function(object, value) {
 
 // console.log(assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama"));
 // console.log(assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined));
+
+module.exports = findKeyByValue;

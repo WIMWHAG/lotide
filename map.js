@@ -1,10 +1,4 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`🟢: ${actual} === ${expected}`);
-  } else {
-    console.log(`❌: ${actual} !== ${expected}`);
-  }
-};
+const assertEqual = require('./assertEqual');
 
 const map = function(arr, callback) {
   const results = [];
@@ -14,5 +8,8 @@ const map = function(arr, callback) {
   return results;
 };
 
-const words = ["ground", "control", "to", "major", "tom"];
-assertArraysEqual(map(words, word => word.length), [6, 7, 2, 5, 3]);
+// Test Codes:
+// const words = ["ground", "control", "to", "major", "tom"];
+// assertArraysEqual(map(words, word => word.length), [6, 7, 2, 5, 3]);
+
+module.exports = map;

@@ -1,21 +1,6 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`🟢: ${actual} === ${expected}`);
-  } else {
-    console.log(`❌: ${actual} !== ${expected}`);
-  }
-};
+const assertEqual = require('./assertEqual');
 
-const eqArrays = function(actual, expected) {
-  if (actual.length !== expected.length)
-  return false;
-for (let i = 0; i < actual.length; i++) {
-  if (actual[i] !== expected[i]) {
-    return false;
-  }
- }
- return true;
-}
+const eqArrays = require('./eqArrays');
 
 const takeUntil = function(arr, callback) {
   let newArr = [];
@@ -36,3 +21,5 @@ const takeUntil = function(arr, callback) {
 // const data2 = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"];
 // const results2 = takeUntil(data2, x => x === ',');
 // console.log(results2);
+
+module.exports = takeUntil;

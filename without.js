@@ -1,21 +1,6 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`🟢Assertion Passed🟢: ${actual} === ${expected}`);
-  } else {
-    console.log(`❌Assertion Failed❌: ${actual} !== ${expected}`);
-  }
-};
+const assertEqual = require('./assertEqual');
 
-const eqArrays = function(actual, expected) {
-  if (actual.length !== expected.length)
-  return false
-for (let i = 0; i < actual.length; i++) {
-  if (actual[i] !== expected[i]) {
-    return false
-  }
- }
- return true
-}
+const eqArrays = require('./eqArrays');
 
 const without = function (source, itemsToRemove) {
   let arr = source;
@@ -29,6 +14,8 @@ const without = function (source, itemsToRemove) {
   return arr;
 };
 
-console.log(without(["wimwhag", "wimhwag", "gahwmiw"], ["wimhwag"]));
+// Test Codes:
+// console.log(without(["wimwhag", "wimhwag", "gahwmiw"], ["wimhwag"]));
+// console.log(without([1, 2, 3], [2]));
 
-console.log(without([1, 2, 3], [2]));
+module.exports = without

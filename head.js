@@ -7,3 +7,5 @@ const head = function (arr) {
 // Test Codes:
 // console.log(assertEqual(head[1, 1]));
 // console.log(assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello"));
+
+module.exports = assertEqual;

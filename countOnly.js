@@ -1,10 +1,4 @@
-const assertArraysEqual = function (arr1, arr2) {
-  if (eqArrays(arr1, arr2)) {
-    console.log(`🟢: ${arr1} === ${arr2}`);
-  } else {
-    console.log(`❌: ${arr1} !== ${arr2}`);
-  }
-};
+const assertEqual = require('./assertEqual');
 
 const countOnly = function(allItems, itemsToCount) {
   const results = {};
@@ -19,3 +13,5 @@ const countOnly = function(allItems, itemsToCount) {
   }
   return results;
 };
+
+module.exports = countOnly;

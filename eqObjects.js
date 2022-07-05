@@ -1,21 +1,6 @@
-const assertArraysEqual = function (arr1, arr2) {
-  if (eqArrays(arr1, arr2)) {
-    console.log(`🟢: ${arr1} === ${arr2}`);
-  } else {
-    console.log(`❌: ${arr1} !== ${arr2}`);
-  }
-};
+const assertArraysEqual = require('./assertArraysEqual');
 
-const eqArrays = function(actual, expected) {
-  if (actual.length !== expected.length)
-  return false;
-for (let i = 0; i < actual.length; i++) {
-  if (actual[i] !== expected[i]) {
-    return false;
-  }
- }
- return true;
-}
+const eqArrays = require('./eqArrays');
 
 const eqObjects = function (obj1, obj2) {
   let keys1 = Object.keys(obj1);
@@ -40,6 +25,7 @@ const eqObjects = function (obj1, obj2) {
   return true;
 };
 
+// Test Codes:
 // const cd = { c: "1", d: ["2", 3] };
 // const dc = { d: ["2", 3], c: "1" };
 // eqObjects(cd, dc); // => true
